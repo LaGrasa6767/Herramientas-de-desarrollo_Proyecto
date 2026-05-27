@@ -7,9 +7,9 @@ import java.math.BigDecimal;
 @Table(name = "products")
 public class Product {
 
-    @Id
-    private Long id;
-
+   @Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private Long id;
     private String nombre;
 
     private BigDecimal precio;

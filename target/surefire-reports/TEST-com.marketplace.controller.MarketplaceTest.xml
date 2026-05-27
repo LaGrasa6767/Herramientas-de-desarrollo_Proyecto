@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.marketplace.controller.MarketplaceTest" time="26.407" tests="28" errors="0" skipped="0" failures="6">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.marketplace.controller.MarketplaceTest" time="27.901" tests="28" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PE"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-23\bin"/>
-    <property name="sun.java.command" value="C:\Users\wsies\AppData\Local\Temp\surefire9773990547000663973\surefirebooter-20260526193250186_3.jar C:\Users\wsies\AppData\Local\Temp\surefire9773990547000663973 2026-05-26T19-32-50_097-jvmRun1 surefire-20260526193250186_1tmp surefire_0-20260526193250186_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\wsies\AppData\Local\Temp\surefire5303342807251215789\surefirebooter-20260526202210676_3.jar C:\Users\wsies\AppData\Local\Temp\surefire5303342807251215789 2026-05-26T20-22-10_567-jvmRun1 surefire-20260526202210676_1tmp surefire_0-20260526202210676_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\wsies\Documents\NetBeansProjects\Herramientas de desarrollo_Proyecto\target\test-classes;C:\Users\wsies\Documents\NetBeansProjects\Herramientas de desarrollo_Proyecto\target\classes;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.5\spring-boot-starter-web-3.2.5.jar;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.5\spring-boot-starter-3.2.5.jar;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot\3.2.5\spring-boot-3.2.5.jar;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.5\spring-boot-autoconfigure-3.2.5.jar;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.5\spring-boot-starter-logging-3.2.5.jar;C:\Users\wsies\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\wsies\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\wsies\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\wsies\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\wsies\.m2\repository\org\slf4j\jul-to-slf4j\2.0.13\jul-to-slf4j-2.0.13.jar;C:\Users\wsies\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\wsies\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.5\spring-boot-starter-json-3.2.5.jar;C:\Users\wsies\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\wsies\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\wsies\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.5\spring-boot-starter-tomcat-3.2.5.jar;C:\Users\wsies\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.20\tomcat-embed-core-10.1.20.jar;C:\Users\wsies\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.20\tomcat-embed-el-10.1.20.jar;C:\Users\wsies\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.20\tomcat-embed-websocket-10.1.20.jar;C:\Users\wsies\.m2\repository\org\springframework\spring-web\6.1.6\spring-web-6.1.6.jar;C:\Users\wsies\.m2\repository\org\springframework\spring-beans\6.1.6\spring-beans-6.1.6.jar;C:\Users\wsies\.m2\repository\io\micrometer\micrometer-observation\1.12.5\micrometer-observation-1.12.5.jar;C:\Users\wsies\.m2\repository\io\micrometer\micrometer-commons\1.12.5\micrometer-commons-1.12.5.jar;C:\Users\wsies\.m2\repository\org\springframework\spring-webmvc\6.1.6\spring-webmvc-6.1.6.jar;C:\Users\wsies\.m2\repository\org\springframework\spring-context\6.1.6\spring-context-6.1.6.jar;C:\Users\wsies\.m2\repository\org\springframework\spring-expression\6.1.6\spring-expression-6.1.6.jar;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.5\spring-boot-starter-data-jpa-3.2.5.jar;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.5\spring-boot-starter-aop-3.2.5.jar;C:\Users\wsies\.m2\repository\org\aspectj\aspectjweaver\1.9.22\aspectjweaver-1.9.22.jar;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.5\spring-boot-starter-jdbc-3.2.5.jar;C:\Users\wsies\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\wsies\.m2\repository\org\springframework\spring-jdbc\6.1.6\spring-jdbc-6.1.6.jar;C:\Users\wsies\.m2\repository\org\hibernate\orm\hibernate-core\6.4.4.Final\hibernate-core-6.4.4.Final.jar;C:\Users\wsies\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\wsies\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\wsies\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\wsies\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\wsies\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\wsies\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\wsies\.m2\repository\net\bytebuddy\byte-buddy\1.14.13\byte-buddy-1.14.13.jar;C:\Users\wsies\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\wsies\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\wsies\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\wsies\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\wsies\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\wsies\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\wsies\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\wsies\.m2\repository\org\springframework\data\spring-data-jpa\3.2.5\spring-data-jpa-3.2.5.jar;C:\Users\wsies\.m2\repository\org\springframework\data\spring-data-commons\3.2.5\spring-data-commons-3.2.5.jar;C:\Users\wsies\.m2\repository\org\springframework\spring-orm\6.1.6\spring-orm-6.1.6.jar;C:\Users\wsies\.m2\repository\org\springframework\spring-tx\6.1.6\spring-tx-6.1.6.jar;C:\Users\wsies\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\wsies\.m2\repository\org\springframework\spring-aspects\6.1.6\spring-aspects-6.1.6.jar;C:\Users\wsies\.m2\repository\org\postgresql\postgresql\42.6.2\postgresql-42.6.2.jar;C:\Users\wsies\.m2\repository\org\checkerframework\checker-qual\3.31.0\checker-qual-3.31.0.jar;C:\Users\wsies\.m2\repository\org\projectlombok\lombok\1.18.32\lombok-1.18.32.jar;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.5\spring-boot-starter-test-3.2.5.jar;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot-test\3.2.5\spring-boot-test-3.2.5.jar;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.5\spring-boot-test-autoconfigure-3.2.5.jar;C:\Users\wsies\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\wsies\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\wsies\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\wsies\.m2\repository\net\minidev\json-smart\2.5.1\json-smart-2.5.1.jar;C:\Users\wsies\.m2\repository\net\minidev\accessors-smart\2.5.1\accessors-smart-2.5.1.jar;C:\Users\wsies\.m2\repository\org\ow2\asm\asm\9.6\asm-9.6.jar;C:\Users\wsies\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\wsies\.m2\repository\org\awaitility\awaitility\4.2.1\awaitility-4.2.1.jar;C:\Users\wsies\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\wsies\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\wsies\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\wsies\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\wsies\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\wsies\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\wsies\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\wsies\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\wsies\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\wsies\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\wsies\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.13\byte-buddy-agent-1.14.13.jar;C:\Users\wsies\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\wsies\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\wsies\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\wsies\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\wsies\.m2\repository\org\springframework\spring-core\6.1.6\spring-core-6.1.6.jar;C:\Users\wsies\.m2\repository\org\springframework\spring-jcl\6.1.6\spring-jcl-6.1.6.jar;C:\Users\wsies\.m2\repository\org\springframework\spring-test\6.1.6\spring-test-6.1.6.jar;C:\Users\wsies\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\wsies\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.2.5\spring-boot-starter-security-3.2.5.jar;C:\Users\wsies\.m2\repository\org\springframework\spring-aop\6.1.6\spring-aop-6.1.6.jar;C:\Users\wsies\.m2\repository\org\springframework\security\spring-security-config\6.2.4\spring-security-config-6.2.4.jar;C:\Users\wsies\.m2\repository\org\springframework\security\spring-security-core\6.2.4\spring-security-core-6.2.4.jar;C:\Users\wsies\.m2\repository\org\springframework\security\spring-security-crypto\6.2.4\spring-security-crypto-6.2.4.jar;C:\Users\wsies\.m2\repository\org\springframework\security\spring-security-web\6.2.4\spring-security-web-6.2.4.jar;C:\Users\wsies\.m2\repository\io\jsonwebtoken\jjwt-api\0.11.5\jjwt-api-0.11.5.jar;C:\Users\wsies\.m2\repository\io\jsonwebtoken\jjwt-impl\0.11.5\jjwt-impl-0.11.5.jar;C:\Users\wsies\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.11.5\jjwt-jackson-0.11.5.jar;C:\Users\wsies\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\wsies\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\wsies\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="C:\Users\wsies\AppData\Local\Temp\surefire9773990547000663973\surefirebooter-20260526193250186_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\wsies\AppData\Local\Temp\surefire5303342807251215789\surefirebooter-20260526202210676_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="23.0.1+11-39"/>
@@ -52,7 +52,7 @@
     <property name="user.dir" value="C:\Users\wsies\Documents\NetBeansProjects\Herramientas de desarrollo_Proyecto"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="11236"/>
+    <property name="PID" value="20804"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="Cp1252"/>
@@ -64,19 +64,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="createOrderEmptyCart" classname="com.marketplace.controller.MarketplaceTest" time="2.061">
-    <failure message="Status expected:&lt;400&gt; but was:&lt;200&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<400> but was:<200>
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
-	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.marketplace.controller.MarketplaceTest.createOrderEmptyCart(MarketplaceTest.java:105)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-]]></failure>
-    <system-out><![CDATA[19:32:50.834 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.marketplace.controller.MarketplaceTest]: MarketplaceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-19:32:50.938 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.marketplace.MarketplaceApplication for test class com.marketplace.controller.MarketplaceTest
+  <testcase name="createOrderEmptyCart" classname="com.marketplace.controller.MarketplaceTest" time="2.373">
+    <system-out><![CDATA[20:22:11.416 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.marketplace.controller.MarketplaceTest]: MarketplaceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:22:11.523 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.marketplace.MarketplaceApplication for test class com.marketplace.controller.MarketplaceTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -86,77 +76,46 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.5)
 
-2026-05-26T19:32:51.246-05:00  INFO 11236 --- [           main] c.m.controller.MarketplaceTest           : Starting MarketplaceTest using Java 23.0.1 with PID 11236 (started by wsies in C:\Users\wsies\Documents\NetBeansProjects\Herramientas de desarrollo_Proyecto)
-2026-05-26T19:32:51.247-05:00  INFO 11236 --- [           main] c.m.controller.MarketplaceTest           : No active profile set, falling back to 1 default profile: "default"
-2026-05-26T19:32:51.754-05:00  INFO 11236 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-26T19:32:51.803-05:00  INFO 11236 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 4 JPA repository interfaces.
-2026-05-26T19:32:52.212-05:00  INFO 11236 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-05-26T19:32:52.268-05:00  INFO 11236 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-05-26T19:32:52.298-05:00  INFO 11236 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-05-26T19:32:52.509-05:00  INFO 11236 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-26T19:32:52.534-05:00  INFO 11236 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-26T19:32:53.963-05:00  INFO 11236 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@72324965
-2026-05-26T19:32:53.964-05:00  INFO 11236 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-26T19:32:54.102-05:00  WARN 11236 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-26T19:32:55.035-05:00  INFO 11236 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-26T19:32:56.917-05:00  INFO 11236 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-26T19:32:57.316-05:00  WARN 11236 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-26T19:32:57.350-05:00  WARN 11236 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-05-26T20:22:11.828-05:00  INFO 20804 --- [           main] c.m.controller.MarketplaceTest           : Starting MarketplaceTest using Java 23.0.1 with PID 20804 (started by wsies in C:\Users\wsies\Documents\NetBeansProjects\Herramientas de desarrollo_Proyecto)
+2026-05-26T20:22:11.828-05:00  INFO 20804 --- [           main] c.m.controller.MarketplaceTest           : No active profile set, falling back to 1 default profile: "default"
+2026-05-26T20:22:12.323-05:00  INFO 20804 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-26T20:22:12.364-05:00  INFO 20804 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
+2026-05-26T20:22:12.757-05:00  INFO 20804 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-26T20:22:12.821-05:00  INFO 20804 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-26T20:22:12.855-05:00  INFO 20804 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-26T20:22:13.070-05:00  INFO 20804 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-26T20:22:13.092-05:00  INFO 20804 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-26T20:22:14.407-05:00  INFO 20804 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@72324965
+2026-05-26T20:22:14.407-05:00  INFO 20804 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-26T20:22:14.551-05:00  WARN 20804 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-26T20:22:15.627-05:00  INFO 20804 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-26T20:22:17.616-05:00  INFO 20804 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-26T20:22:18.006-05:00  WARN 20804 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-26T20:22:18.042-05:00  WARN 20804 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 0a212661-c764-4677-9348-851459361dca
+Using generated security password: c6c19433-f264-4cfd-b739-bec052972bbd
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-05-26T19:32:57.728-05:00  INFO 11236 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f97e963, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a25f8ee, org.springframework.security.web.context.SecurityContextHolderFilter@456c53a, org.springframework.security.web.header.HeaderWriterFilter@34893693, org.springframework.web.filter.CorsFilter@6e161cea, org.springframework.security.web.authentication.logout.LogoutFilter@45a40353, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58fadccb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@711fbcef, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@673e1cf2, org.springframework.security.web.access.ExceptionTranslationFilter@19b33b0d, org.springframework.security.web.access.intercept.AuthorizationFilter@6d7d0946]
-2026-05-26T19:32:58.058-05:00  INFO 11236 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-05-26T19:32:58.059-05:00  INFO 11236 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-05-26T19:32:58.059-05:00  INFO 11236 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-05-26T19:32:58.080-05:00  INFO 11236 --- [           main] c.m.controller.MarketplaceTest           : Started MarketplaceTest in 7.035 seconds (process running for 7.799)
+2026-05-26T20:22:18.406-05:00  INFO 20804 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f97e963, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a25f8ee, org.springframework.security.web.context.SecurityContextHolderFilter@456c53a, org.springframework.security.web.header.HeaderWriterFilter@34893693, org.springframework.web.filter.CorsFilter@6e161cea, org.springframework.security.web.authentication.logout.LogoutFilter@45a40353, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58fadccb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@711fbcef, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@673e1cf2, org.springframework.security.web.access.ExceptionTranslationFilter@19b33b0d, org.springframework.security.web.access.intercept.AuthorizationFilter@6d7d0946]
+2026-05-26T20:22:18.734-05:00  INFO 20804 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-26T20:22:18.734-05:00  INFO 20804 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-26T20:22:18.734-05:00  INFO 20804 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-05-26T20:22:18.753-05:00  INFO 20804 --- [           main] c.m.controller.MarketplaceTest           : Started MarketplaceTest in 7.123 seconds (process running for 7.951)
 Hibernate: select ci1_0.id,ci1_0.cantidad,ci1_0.fecha_agregado,ci1_0.order_id,ci1_0.product_id,ci1_0.subtotal from cart_items ci1_0
 Hibernate: select o1_0.id,o1_0.fecha,o1_0.status,o1_0.total,u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from orders o1_0 left join users u1_0 on u1_0.id=o1_0.user_id where o1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
-Hibernate: insert into orders (fecha,status,total,user_id) values (?,?,?,?)
-Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
-Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+Hibernate: delete from cart_items where id=?
+Hibernate: delete from cart_items where id=?
+Hibernate: delete from cart_items where id=?
+Hibernate: delete from cart_items where id=?
+Hibernate: delete from cart_items where id=?
+Hibernate: delete from cart_items where id=?
 Hibernate: select ci1_0.id,ci1_0.cantidad,ci1_0.fecha_agregado,ci1_0.order_id,ci1_0.product_id,ci1_0.subtotal from cart_items ci1_0
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /orders/create
-       Parameters = {}
-          Headers = []
-             Body = null
-    Session Attrs = {}
-
-Handler:
-             Type = com.marketplace.controller.OrderController
-           Method = com.marketplace.controller.OrderController#create()
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 200
-    Error message = null
-          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
-     Content type = application/json
-             Body = {"id":65,"items":[{"id":114,"product":{"id":59,"nombre":"CPU","precio":900.00,"stock":10},"cantidad":1,"subtotal":900.0,"fechaAgregado":"2026-05-26T19:27:55.856313"},{"id":115,"product":{"id":61,"nombre":"Celular","precio":1200.00,"stock":10},"cantidad":2,"subtotal":2400.0,"fechaAgregado":"2026-05-26T19:28:00.286384"}],"status":"CREATED","total":3300.0,"fecha":"2026-05-26T19:32:59.3715245","user":null}
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
 ]]></system-out>
     <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\wsies\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.13\byte-buddy-agent-1.14.13.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
@@ -164,176 +123,55 @@ WARNING: If a serviceability tool is not in use, please run with -Djdk.instrumen
 WARNING: Dynamic loading of agents will be disallowed by default in a future release
 ]]></system-err>
   </testcase>
-  <testcase name="discountEdgeCase" classname="com.marketplace.controller.MarketplaceTest" time="0.247">
-    <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+  <testcase name="discountEdgeCase" classname="com.marketplace.controller.MarketplaceTest" time="0.522">
+    <system-out><![CDATA[Hibernate: insert into products (nombre,precio,stock) values (?,?,?)
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 ]]></system-out>
   </testcase>
-  <testcase name="getInvalidUser" classname="com.marketplace.controller.MarketplaceTest" time="0.23">
+  <testcase name="getInvalidUser" classname="com.marketplace.controller.MarketplaceTest" time="0.222">
     <system-out><![CDATA[Hibernate: select u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from users u1_0 where u1_0.id=?
 ]]></system-out>
   </testcase>
-  <testcase name="cancelOrder" classname="com.marketplace.controller.MarketplaceTest" time="2.161">
-    <failure message="Status expected:&lt;200&gt; but was:&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<404>
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
-	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.marketplace.controller.MarketplaceTest.cancelOrder(MarketplaceTest.java:129)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-]]></failure>
-    <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+  <testcase name="cancelOrder" classname="com.marketplace.controller.MarketplaceTest" time="2.174">
+    <system-out><![CDATA[Hibernate: insert into products (nombre,precio,stock) values (?,?,?)
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: insert into cart_items (cantidad,fecha_agregado,order_id,product_id,subtotal) values (?,?,?,?,?)
 Hibernate: select ci1_0.id,ci1_0.cantidad,ci1_0.fecha_agregado,ci1_0.order_id,ci1_0.product_id,ci1_0.subtotal from cart_items ci1_0
-Hibernate: select o1_0.id,o1_0.fecha,o1_0.status,o1_0.total,u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from orders o1_0 left join users u1_0 on u1_0.id=o1_0.user_id where o1_0.id=?
-Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
-Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: insert into orders (fecha,status,total,user_id) values (?,?,?,?)
 Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
-Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
-Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
 Hibernate: select ci1_0.id,ci1_0.cantidad,ci1_0.fecha_agregado,ci1_0.order_id,ci1_0.product_id,ci1_0.subtotal from cart_items ci1_0
 Hibernate: select o1_0.id,o1_0.fecha,o1_0.status,o1_0.total,u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from orders o1_0 left join users u1_0 on u1_0.id=o1_0.user_id where o1_0.id=?
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /cart/add
-       Parameters = {productId=[1], quantity=[1]}
-          Headers = []
-             Body = null
-    Session Attrs = {}
-
-Handler:
-             Type = com.marketplace.controller.CartController
-           Method = com.marketplace.controller.CartController#add(Long, int)
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 200
-    Error message = null
-          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
-     Content type = application/json
-             Body = {"id":116,"product":{"id":1,"nombre":"Test","precio":100.00,"stock":5},"cantidad":1,"subtotal":100.0,"fechaAgregado":"2026-05-26T19:33:00.8674138"}
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /orders/create
-       Parameters = {}
-          Headers = []
-             Body = null
-    Session Attrs = {}
-
-Handler:
-             Type = com.marketplace.controller.OrderController
-           Method = com.marketplace.controller.OrderController#create()
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 200
-    Error message = null
-          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
-     Content type = application/json
-             Body = {"id":66,"items":[{"id":114,"product":{"id":59,"nombre":"CPU","precio":900.00,"stock":10},"cantidad":1,"subtotal":900.0,"fechaAgregado":"2026-05-26T19:27:55.856313"},{"id":115,"product":{"id":61,"nombre":"Celular","precio":1200.00,"stock":10},"cantidad":2,"subtotal":2400.0,"fechaAgregado":"2026-05-26T19:28:00.286384"},{"id":116,"product":{"id":1,"nombre":"Test","precio":100.00,"stock":5},"cantidad":1,"subtotal":100.0,"fechaAgregado":"2026-05-26T19:33:00.867414"}],"status":"CREATED","total":3400.0,"fecha":"2026-05-26T19:33:01.7743121","user":null}
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /orders/1/cancel
-       Parameters = {}
-          Headers = []
-             Body = null
-    Session Attrs = {}
-
-Handler:
-             Type = com.marketplace.controller.OrderController
-           Method = com.marketplace.controller.OrderController#cancel(Long)
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 404
-    Error message = null
-          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"text/plain;charset=UTF-8", Content-Length:"19", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
-     Content type = text/plain;charset=UTF-8
-             Body = Orden no encontrada
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
+Hibernate: update orders set fecha=?,status=?,total=?,user_id=? where id=?
+Hibernate: select i1_0.order_id,i1_0.id,i1_0.cantidad,i1_0.fecha_agregado,p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock,i1_0.subtotal from cart_items i1_0 left join products p1_0 on p1_0.id=i1_0.product_id where i1_0.order_id=?
 ]]></system-out>
   </testcase>
-  <testcase name="discountInvalidProduct" classname="com.marketplace.controller.MarketplaceTest" time="0.232">
+  <testcase name="discountInvalidProduct" classname="com.marketplace.controller.MarketplaceTest" time="0.215">
     <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 ]]></system-out>
   </testcase>
-  <testcase name="payInvalidOrder" classname="com.marketplace.controller.MarketplaceTest" time="0.225">
+  <testcase name="payInvalidOrder" classname="com.marketplace.controller.MarketplaceTest" time="0.217">
     <system-out><![CDATA[Hibernate: select o1_0.id,o1_0.fecha,o1_0.status,o1_0.total,u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from orders o1_0 left join users u1_0 on u1_0.id=o1_0.user_id where o1_0.id=?
 ]]></system-out>
   </testcase>
-  <testcase name="addMultipleTimes" classname="com.marketplace.controller.MarketplaceTest" time="0.921">
-    <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+  <testcase name="addMultipleTimes" classname="com.marketplace.controller.MarketplaceTest" time="1.066">
+    <system-out><![CDATA[Hibernate: insert into products (nombre,precio,stock) values (?,?,?)
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: insert into cart_items (cantidad,fecha_agregado,order_id,product_id,subtotal) values (?,?,?,?,?)
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: insert into cart_items (cantidad,fecha_agregado,order_id,product_id,subtotal) values (?,?,?,?,?)
 ]]></system-out>
   </testcase>
-  <testcase name="getCartTotalEmpty" classname="com.marketplace.controller.MarketplaceTest" time="0.719">
+  <testcase name="getCartTotalEmpty" classname="com.marketplace.controller.MarketplaceTest" time="0.552">
     <system-out><![CDATA[Hibernate: select ci1_0.id,ci1_0.cantidad,ci1_0.fecha_agregado,ci1_0.order_id,ci1_0.product_id,ci1_0.subtotal from cart_items ci1_0
 Hibernate: select o1_0.id,o1_0.fecha,o1_0.status,o1_0.total,u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from orders o1_0 left join users u1_0 on u1_0.id=o1_0.user_id where o1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
-Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 ]]></system-out>
   </testcase>
-  <testcase name="createOrder" classname="com.marketplace.controller.MarketplaceTest" time="2.354">
-    <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+  <testcase name="createOrder" classname="com.marketplace.controller.MarketplaceTest" time="2.495">
+    <system-out><![CDATA[Hibernate: insert into products (nombre,precio,stock) values (?,?,?)
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: insert into cart_items (cantidad,fecha_agregado,order_id,product_id,subtotal) values (?,?,?,?,?)
 Hibernate: select ci1_0.id,ci1_0.cantidad,ci1_0.fecha_agregado,ci1_0.order_id,ci1_0.product_id,ci1_0.subtotal from cart_items ci1_0
 Hibernate: select o1_0.id,o1_0.fecha,o1_0.status,o1_0.total,u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from orders o1_0 left join users u1_0 on u1_0.id=o1_0.user_id where o1_0.id=?
@@ -345,12 +183,10 @@ Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_
 Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
 Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
 Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
-Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
-Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
 Hibernate: select ci1_0.id,ci1_0.cantidad,ci1_0.fecha_agregado,ci1_0.order_id,ci1_0.product_id,ci1_0.subtotal from cart_items ci1_0
 ]]></system-out>
   </testcase>
-  <testcase name="cartTotalFinal" classname="com.marketplace.controller.MarketplaceTest" time="1.213">
+  <testcase name="cartTotalFinal" classname="com.marketplace.controller.MarketplaceTest" time="0.645">
     <system-out><![CDATA[Hibernate: select ci1_0.id,ci1_0.cantidad,ci1_0.fecha_agregado,ci1_0.order_id,ci1_0.product_id,ci1_0.subtotal from cart_items ci1_0
 Hibernate: select o1_0.id,o1_0.fecha,o1_0.status,o1_0.total,u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from orders o1_0 left join users u1_0 on u1_0.id=o1_0.user_id where o1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
@@ -358,61 +194,57 @@ Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 ]]></system-out>
   </testcase>
-  <testcase name="createProductMinimal" classname="com.marketplace.controller.MarketplaceTest" time="0.28">
+  <testcase name="createProductMinimal" classname="com.marketplace.controller.MarketplaceTest" time="0.217">
     <system-out><![CDATA[Hibernate: insert into products (nombre,precio,stock) values (?,?,?)
 ]]></system-out>
   </testcase>
-  <testcase name="addToCart" classname="com.marketplace.controller.MarketplaceTest" time="0.444">
-    <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+  <testcase name="addToCart" classname="com.marketplace.controller.MarketplaceTest" time="0.646">
+    <system-out><![CDATA[Hibernate: insert into products (nombre,precio,stock) values (?,?,?)
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: insert into cart_items (cantidad,fecha_agregado,order_id,product_id,subtotal) values (?,?,?,?,?)
 ]]></system-out>
   </testcase>
-  <testcase name="cartTotal" classname="com.marketplace.controller.MarketplaceTest" time="0.694">
+  <testcase name="cartTotal" classname="com.marketplace.controller.MarketplaceTest" time="0.754">
     <system-out><![CDATA[Hibernate: select ci1_0.id,ci1_0.cantidad,ci1_0.fecha_agregado,ci1_0.order_id,ci1_0.product_id,ci1_0.subtotal from cart_items ci1_0
 Hibernate: select o1_0.id,o1_0.fecha,o1_0.status,o1_0.total,u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from orders o1_0 left join users u1_0 on u1_0.id=o1_0.user_id where o1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 ]]></system-out>
   </testcase>
-  <testcase name="applyDiscount" classname="com.marketplace.controller.MarketplaceTest" time="0.456">
-    <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+  <testcase name="applyDiscount" classname="com.marketplace.controller.MarketplaceTest" time="0.664">
+    <system-out><![CDATA[Hibernate: insert into products (nombre,precio,stock) values (?,?,?)
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: update products set nombre=?,precio=?,stock=? where id=?
 ]]></system-out>
   </testcase>
   <testcase name="createProductInvalid" classname="com.marketplace.controller.MarketplaceTest" time="0.003"/>
-  <testcase name="cancelInvalidOrder" classname="com.marketplace.controller.MarketplaceTest" time="0.229">
+  <testcase name="cancelInvalidOrder" classname="com.marketplace.controller.MarketplaceTest" time="0.218">
     <system-out><![CDATA[Hibernate: select o1_0.id,o1_0.fecha,o1_0.status,o1_0.total,u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from orders o1_0 left join users u1_0 on u1_0.id=o1_0.user_id where o1_0.id=?
 ]]></system-out>
   </testcase>
-  <testcase name="getProductsAgain" classname="com.marketplace.controller.MarketplaceTest" time="0.231">
+  <testcase name="getProductsAgain" classname="com.marketplace.controller.MarketplaceTest" time="0.221">
     <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0
 ]]></system-out>
   </testcase>
-  <testcase name="getProductsFinal" classname="com.marketplace.controller.MarketplaceTest" time="0.23">
+  <testcase name="getProductsFinal" classname="com.marketplace.controller.MarketplaceTest" time="0.214">
     <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0
 ]]></system-out>
   </testcase>
-  <testcase name="addCartEdgeCase" classname="com.marketplace.controller.MarketplaceTest" time="0.003"/>
-  <testcase name="getProducts" classname="com.marketplace.controller.MarketplaceTest" time="0.23">
+  <testcase name="addCartEdgeCase" classname="com.marketplace.controller.MarketplaceTest" time="0.006"/>
+  <testcase name="getProducts" classname="com.marketplace.controller.MarketplaceTest" time="0.22">
     <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0
 ]]></system-out>
   </testcase>
-  <testcase name="payOrder" classname="com.marketplace.controller.MarketplaceTest" time="2.741">
-    <failure message="Status expected:&lt;200&gt; but was:&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<404>
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
-	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.marketplace.controller.MarketplaceTest.payOrder(MarketplaceTest.java:117)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-]]></failure>
-    <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+  <testcase name="payOrder" classname="com.marketplace.controller.MarketplaceTest" time="3.111">
+    <system-out><![CDATA[Hibernate: insert into products (nombre,precio,stock) values (?,?,?)
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: insert into cart_items (cantidad,fecha_agregado,order_id,product_id,subtotal) values (?,?,?,?,?)
 Hibernate: select ci1_0.id,ci1_0.cantidad,ci1_0.fecha_agregado,ci1_0.order_id,ci1_0.product_id,ci1_0.subtotal from cart_items ci1_0
 Hibernate: select o1_0.id,o1_0.fecha,o1_0.status,o1_0.total,u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from orders o1_0 left join users u1_0 on u1_0.id=o1_0.user_id where o1_0.id=?
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
@@ -423,341 +255,49 @@ Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_
 Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
 Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
 Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
-Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
-Hibernate: update cart_items set cantidad=?,fecha_agregado=?,order_id=?,product_id=?,subtotal=? where id=?
 Hibernate: select ci1_0.id,ci1_0.cantidad,ci1_0.fecha_agregado,ci1_0.order_id,ci1_0.product_id,ci1_0.subtotal from cart_items ci1_0
 Hibernate: select o1_0.id,o1_0.fecha,o1_0.status,o1_0.total,u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from orders o1_0 left join users u1_0 on u1_0.id=o1_0.user_id where o1_0.id=?
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /cart/add
-       Parameters = {productId=[1], quantity=[1]}
-          Headers = []
-             Body = null
-    Session Attrs = {}
-
-Handler:
-             Type = com.marketplace.controller.CartController
-           Method = com.marketplace.controller.CartController#add(Long, int)
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 200
-    Error message = null
-          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
-     Content type = application/json
-             Body = {"id":121,"product":{"id":1,"nombre":"Test","precio":90.00,"stock":5},"cantidad":1,"subtotal":90.0,"fechaAgregado":"2026-05-26T19:33:11.491793"}
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /orders/create
-       Parameters = {}
-          Headers = []
-             Body = null
-    Session Attrs = {}
-
-Handler:
-             Type = com.marketplace.controller.OrderController
-           Method = com.marketplace.controller.OrderController#create()
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 200
-    Error message = null
-          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
-     Content type = application/json
-             Body = {"id":68,"items":[{"id":114,"product":{"id":59,"nombre":"CPU","precio":900.00,"stock":10},"cantidad":1,"subtotal":900.0,"fechaAgregado":"2026-05-26T19:27:55.856313"},{"id":115,"product":{"id":61,"nombre":"Celular","precio":1200.00,"stock":10},"cantidad":2,"subtotal":2400.0,"fechaAgregado":"2026-05-26T19:28:00.286384"},{"id":116,"product":{"id":1,"nombre":"Test","precio":90.00,"stock":5},"cantidad":1,"subtotal":100.0,"fechaAgregado":"2026-05-26T19:33:00.867414"},{"id":117,"product":{"id":1,"nombre":"Test","precio":90.00,"stock":5},"cantidad":1,"subtotal":100.0,"fechaAgregado":"2026-05-26T19:33:03.497406"},{"id":118,"product":{"id":1,"nombre":"Test","precio":90.00,"stock":5},"cantidad":2,"subtotal":200.0,"fechaAgregado":"2026-05-26T19:33:03.951131"},{"id":119,"product":{"id":1,"nombre":"Test","precio":90.00,"stock":5},"cantidad":1,"subtotal":100.0,"fechaAgregado":"2026-05-26T19:33:05.126624"},{"id":120,"product":{"id":1,"nombre":"Test","precio":90.00,"stock":5},"cantidad":1,"subtotal":100.0,"fechaAgregado":"2026-05-26T19:33:08.974108"},{"id":121,"product":{"id":1,"nombre":"Test","precio":90.00,"stock":5},"cantidad":1,"subtotal":90.0,"fechaAgregado":"2026-05-26T19:33:11.491793"}],"status":"CREATED","total":3990.0,"fecha":"2026-05-26T19:33:12.3950797","user":null}
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /orders/1/pay
-       Parameters = {}
-          Headers = []
-             Body = null
-    Session Attrs = {}
-
-Handler:
-             Type = com.marketplace.controller.OrderController
-           Method = com.marketplace.controller.OrderController#pay(Long)
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 404
-    Error message = null
-          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"text/plain;charset=UTF-8", Content-Length:"19", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
-     Content type = text/plain;charset=UTF-8
-             Body = Orden no encontrada
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
+Hibernate: update orders set fecha=?,status=?,total=?,user_id=? where id=?
+Hibernate: select i1_0.order_id,i1_0.id,i1_0.cantidad,i1_0.fecha_agregado,p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock,i1_0.subtotal from cart_items i1_0 left join products p1_0 on p1_0.id=i1_0.product_id where i1_0.order_id=?
 ]]></system-out>
   </testcase>
-  <testcase name="createUser" classname="com.marketplace.controller.MarketplaceTest" time="0.245">
-    <failure message="Status expected:&lt;200&gt; but was:&lt;500&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<500>
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
-	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.marketplace.controller.MarketplaceTest.createUser(MarketplaceTest.java:222)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-]]></failure>
+  <testcase name="createUser" classname="com.marketplace.controller.MarketplaceTest" time="0.219">
     <system-out><![CDATA[Hibernate: insert into users (direccion,email,nombre,password,role) values (?,?,?,?,?)
-2026-05-26T19:33:14.134-05:00  WARN 11236 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
-2026-05-26T19:33:14.135-05:00 ERROR 11236 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
-  Detail: Key (email)=(ana1@test.com) already exists.
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /users
-       Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"40"]
-             Body = {"nombre":"Ana","email":"ana1@test.com"}
-    Session Attrs = {}
-
-Handler:
-             Type = com.marketplace.controller.UserController
-           Method = com.marketplace.controller.UserController#create(User)
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = org.springframework.dao.DataIntegrityViolationException
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 500
-    Error message = null
-          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"text/plain;charset=UTF-8", Content-Length:"372", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
-     Content type = text/plain;charset=UTF-8
-             Body = could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
-  Detail: Key (email)=(ana1@test.com) already exists.] [insert into users (direccion,email,nombre,password,role) values (?,?,?,?,?)]; SQL [insert into users (direccion,email,nombre,password,role) values (?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="addLargeQuantity" classname="com.marketplace.controller.MarketplaceTest" time="0.228">
+  <testcase name="addLargeQuantity" classname="com.marketplace.controller.MarketplaceTest" time="0.432">
+    <system-out><![CDATA[Hibernate: insert into products (nombre,precio,stock) values (?,?,?)
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+]]></system-out>
+  </testcase>
+  <testcase name="addInvalidProduct" classname="com.marketplace.controller.MarketplaceTest" time="0.214">
     <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 ]]></system-out>
   </testcase>
-  <testcase name="addInvalidProduct" classname="com.marketplace.controller.MarketplaceTest" time="0.237">
-    <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
-]]></system-out>
-  </testcase>
-  <testcase name="deleteUser" classname="com.marketplace.controller.MarketplaceTest" time="0.676">
-    <failure message="Status expected:&lt;200&gt; but was:&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<404>
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
-	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.marketplace.controller.MarketplaceTest.deleteUser(MarketplaceTest.java:253)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-]]></failure>
+  <testcase name="deleteUser" classname="com.marketplace.controller.MarketplaceTest" time="1.028">
     <system-out><![CDATA[Hibernate: insert into users (direccion,email,nombre,password,role) values (?,?,?,?,?)
 Hibernate: select count(*) from users u1_0 where u1_0.id=?
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /users
-       Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"40"]
-             Body = {"nombre":"Ana","email":"ana3@test.com"}
-    Session Attrs = {}
-
-Handler:
-             Type = com.marketplace.controller.UserController
-           Method = com.marketplace.controller.UserController#create(User)
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 200
-    Error message = null
-          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
-     Content type = application/json
-             Body = {"id":53,"nombre":"Ana","email":"ana3@test.com","direccion":null,"password":null,"role":null}
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
-
-MockHttpServletRequest:
-      HTTP Method = DELETE
-      Request URI = /users/1
-       Parameters = {}
-          Headers = []
-             Body = null
-    Session Attrs = {}
-
-Handler:
-             Type = com.marketplace.controller.UserController
-           Method = com.marketplace.controller.UserController#delete(Long)
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 404
-    Error message = null
-          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
-     Content type = null
-             Body = 
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
+Hibernate: select u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from users u1_0 where u1_0.id=?
+Hibernate: delete from users where id=?
 ]]></system-out>
   </testcase>
-  <testcase name="getUserById" classname="com.marketplace.controller.MarketplaceTest" time="0.244">
-    <failure message="Status expected:&lt;200&gt; but was:&lt;500&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<500>
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
-	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
-	at com.marketplace.controller.MarketplaceTest.getUserById(MarketplaceTest.java:232)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-]]></failure>
+  <testcase name="getUserById" classname="com.marketplace.controller.MarketplaceTest" time="0.43">
     <system-out><![CDATA[Hibernate: insert into users (direccion,email,nombre,password,role) values (?,?,?,?,?)
-2026-05-26T19:33:15.516-05:00  WARN 11236 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
-2026-05-26T19:33:15.516-05:00 ERROR 11236 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
-  Detail: Key (email)=(ana2@test.com) already exists.
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /users
-       Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"40"]
-             Body = {"nombre":"Ana","email":"ana2@test.com"}
-    Session Attrs = {}
-
-Handler:
-             Type = com.marketplace.controller.UserController
-           Method = com.marketplace.controller.UserController#create(User)
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = org.springframework.dao.DataIntegrityViolationException
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 500
-    Error message = null
-          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"text/plain;charset=UTF-8", Content-Length:"372", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
-     Content type = text/plain;charset=UTF-8
-             Body = could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
-  Detail: Key (email)=(ana2@test.com) already exists.] [insert into users (direccion,email,nombre,password,role) values (?,?,?,?,?)]; SQL [insert into users (direccion,email,nombre,password,role) values (?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
+Hibernate: select u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from users u1_0 where u1_0.id=?
 ]]></system-out>
   </testcase>
-  <testcase name="cartTotalAfterAdd" classname="com.marketplace.controller.MarketplaceTest" time="1.135">
+  <testcase name="cartTotalAfterAdd" classname="com.marketplace.controller.MarketplaceTest" time="1.077">
     <system-out><![CDATA[Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
-Hibernate: insert into cart_items (cantidad,fecha_agregado,order_id,product_id,subtotal) values (?,?,?,?,?)
 Hibernate: select ci1_0.id,ci1_0.cantidad,ci1_0.fecha_agregado,ci1_0.order_id,ci1_0.product_id,ci1_0.subtotal from cart_items ci1_0
 Hibernate: select o1_0.id,o1_0.fecha,o1_0.status,o1_0.total,u1_0.id,u1_0.direccion,u1_0.email,u1_0.nombre,u1_0.password,u1_0.role from orders o1_0 left join users u1_0 on u1_0.id=o1_0.user_id where o1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
+Hibernate: select p1_0.id,p1_0.nombre,p1_0.precio,p1_0.stock from products p1_0 where p1_0.id=?
 ]]></system-out>
   </testcase>
-  <testcase name="createProduct" classname="com.marketplace.controller.MarketplaceTest" time="0.32">
+  <testcase name="createProduct" classname="com.marketplace.controller.MarketplaceTest" time="0.233">
     <system-out><![CDATA[Hibernate: insert into products (nombre,precio,stock) values (?,?,?)
 ]]></system-out>
   </testcase>

@@ -35,7 +35,11 @@ public class MarketplaceTest {
     return response.split("\"id\":")[1].split(",")[0];
 }
 
-    // ---------- PRODUCTS ----------
+private String randomEmail() {
+    return "ana" + System.currentTimeMillis() + "@test.com";
+}
+
+    // ---------- PRODUCTOS ----------
 
         @Test
         void getProducts() throws Exception {
@@ -76,7 +80,7 @@ public class MarketplaceTest {
                         .andExpect(status().isNotFound());
         }
 
-        // ---------- CART ----------
+        // ---------- CARRITO ----------
 
         @Test
         void addToCart() throws Exception {
@@ -114,7 +118,7 @@ public class MarketplaceTest {
                         .andExpect(status().isOk());
         }
 
-        // ---------- ORDERS ----------
+        // ---------- ORDENES ----------
 
         @Test
         void createOrder() throws Exception {
@@ -190,7 +194,7 @@ public class MarketplaceTest {
                         .andExpect(status().isNotFound());
         }
 
-        // ---------- EXTRA ----------
+        // ---------- EXTRAS ----------
 
         @Test
         void addMultipleTimes() throws Exception {
@@ -274,36 +278,41 @@ public class MarketplaceTest {
                         .andExpect(status().isOk());
         }
 
-        // ---------- USERS (SOLO CORREGIDO, NO RECORTADO) ----------
+        // ---------- USUARIOS ----------
 
         @Test
         void createUser() throws Exception {
+
+        String email = randomEmail();
 
         mockMvc.perform(post("/users")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("""
                         {
                                 "nombre":"Ana",
-                                "email":"ana1@test.com",
+                                "email":"%s",
                                 "password":"123456",
                                 "role":"USER"
                         }
-                        """))
+                        """.formatted(email)))
                 .andExpect(status().isOk());
         }
+
         @Test
         void getUserById() throws Exception {
+
+        String email = randomEmail();
 
         String response = mockMvc.perform(post("/users")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("""
                 {
                         "nombre":"Ana",
-                        "email":"ana2@test.com",
+                        "email":"%s",
                         "password":"123456",
                         "role":"USER"
                 }
-                """))
+                """.formatted(email)))
                 .andExpect(status().isOk())
                 .andReturn()
                 .getResponse()
@@ -318,16 +327,18 @@ public class MarketplaceTest {
         @Test
         void deleteUser() throws Exception {
 
+        String email = randomEmail();
+
         String response = mockMvc.perform(post("/users")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("""
                 {
                         "nombre":"Ana",
-                        "email":"ana3@test.com",
+                        "email":"%s",
                         "password":"123456",
                         "role":"USER"
                 }
-                """))
+                """.formatted(email)))
                 .andExpect(status().isOk())
                 .andReturn()
                 .getResponse()

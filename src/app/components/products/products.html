@@ -1,0 +1,27 @@
+<h2>Productos</h2>
+
+<div class="form">
+  <input placeholder="Nombre" [(ngModel)]="nombre">
+  <input type="number" placeholder="Precio" [(ngModel)]="precio">
+  <input type="number" placeholder="Stock" [(ngModel)]="stock">
+
+  <button (click)="create()">Crear producto</button>
+</div>
+<h3>Aplicar descuento</h3>
+
+<input placeholder="ID Producto" [(ngModel)]="productId">
+<input placeholder="Porcentaje (en decimales)" [(ngModel)]="porcentaje">
+
+<button (click)="applyDiscount()">
+  Aplicar descuento
+</button>
+
+<p>{{ mensaje }}</p>
+
+<hr>
+
+<ul>
+  <li *ngFor="let p of products">
+    {{ p.nombre }} - S/ {{ p.precio }} - Stock: {{ p.stock }}
+  </li>
+</ul>

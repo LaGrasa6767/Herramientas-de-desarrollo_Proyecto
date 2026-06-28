@@ -1,0 +1,19 @@
+<h2>Usuarios</h2>
+
+<div class="form">
+  <input placeholder="Nombre" [(ngModel)]="nombre">
+  <input placeholder="Email" [(ngModel)]="email">
+  <input placeholder="Dirección" [(ngModel)]="direccion">
+  <input placeholder="Password" [(ngModel)]="password">
+
+  <button (click)="create()">Crear usuario</button>
+</div>
+
+<hr>
+
+<ul>
+  <li *ngFor="let u of users">
+    {{ u.nombre }} - {{ u.email }}
+    <button (click)="delete(u.id)">Eliminar</button>
+  </li>
+</ul>

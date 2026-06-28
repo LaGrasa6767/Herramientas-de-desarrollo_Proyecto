@@ -1,0 +1,25 @@
+<h2>Carrito</h2>
+
+<div class="form">
+  <input type="number" placeholder="ID Producto" [(ngModel)]="productId">
+  <input type="number" placeholder="Cantidad" [(ngModel)]="quantity">
+
+  <button (click)="add()">Agregar al carrito</button>
+<button (click)="clear()">
+  Limpiar carrito
+</button>
+</div>
+
+<hr>
+
+<h3>Items</h3>
+
+<ul>
+  <li *ngFor="let item of cart">
+    Producto: {{ item.product.nombre }} |
+    Cantidad: {{ item.cantidad }} |
+    Subtotal: {{ item.subtotal }}
+  </li>
+</ul>
+
+<h3>Total: S/ {{ total }}</h3>

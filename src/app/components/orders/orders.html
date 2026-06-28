@@ -1,0 +1,30 @@
+<h2>Órdenes</h2>
+
+<div class="form">
+  <button (click)="createOrder()">Crear Orden</button>
+</div>
+
+<hr>
+
+<div class="form">
+  <input type="number" placeholder="ID Orden" [(ngModel)]="orderId">
+
+  <button (click)="searchOrder()">Buscar</button>
+  <button (click)="payOrder()">Pagar</button>
+  <button (click)="cancelOrder()">Cancelar</button>
+</div>
+
+<hr>
+
+<div *ngIf="order">
+  <p><b>ID:</b> {{ order.id }}</p>
+  <p><b>Status:</b> {{ order.status }}</p>
+  <p><b>Total:</b> {{ order.total }}</p>
+
+  <h4>Items</h4>
+  <ul>
+    <li *ngFor="let i of order.items">
+      {{ i.product.nombre }} - {{ i.cantidad }} - {{ i.subtotal }}
+    </li>
+  </ul>
+</div>

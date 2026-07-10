@@ -1,0 +1,17 @@
+com\marketplace\model\CartItem.class
+com\marketplace\service\ProductService.class
+com\marketplace\service\OrderService.class
+com\marketplace\repository\OrderRepository.class
+com\marketplace\model\Product.class
+com\marketplace\service\CartService.class
+com\marketplace\controller\ProductController.class
+com\marketplace\controller\UserController.class
+com\marketplace\controller\OrderController.class
+com\marketplace\model\Order.class
+com\marketplace\repository\UserRepository.class
+com\marketplace\controller\CartController.class
+com\marketplace\MarketplaceApplication.class
+com\marketplace\exception\GlobalExceptionHandler.class
+com\marketplace\repository\CartItemRepository.class
+com\marketplace\model\User.class
+com\marketplace\repository\ProductRepository.class

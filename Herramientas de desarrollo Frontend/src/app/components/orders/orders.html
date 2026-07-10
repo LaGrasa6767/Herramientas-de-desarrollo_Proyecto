@@ -1,0 +1,245 @@
+<!-- NOTIFICACIÓN FLOTANTE -->
+<div *ngIf="notificacion.mostrar" class="notificacion-toast" [ngClass]="notificacion.tipo">
+  <span>{{ notificacion.mensaje }}</span>
+</div>
+
+<div class="orders-container">
+  <!-- CABECERA INSTITUCIONAL -->
+  <header class="orders-header">
+    <div class="header-content">
+      <span class="badge-utp">GESTIÓN DE PEDIDOS UTP</span>
+      <h1>Historial de Órdenes y Pedidos</h1>
+      <p>Administra, consulta el estado y realiza el pago en línea de tus adquisiciones universitarias</p>
+    </div>
+
+    <!-- BARRA DE BÚSQUEDA Y ACCIONES -->
+    <div class="header-actions">
+      <!-- SELECTOR DE FILTRO POR USUARIO PARA EL ADMINISTRADOR -->
+      <div class="user-filter-box" *ngIf="isAdmin() && uniqueUsers.length > 0">
+        <select [(ngModel)]="selectedUserIdFilter" (change)="filterByUser()" class="user-filter-select"
+          title="Filtrar órdenes por estudiante">
+          <option value="ALL"> Todos los Alumnos ({{ allOrdersList.length }})</option>
+          <option *ngFor="let u of uniqueUsers" [value]="u.id">
+            👤 {{ u.nombre || u.email || ('ID #' + u.id) }} ({{ u.orderCount }} ped.)
+          </option>
+        </select>
+      </div>
+
+      <div class="search-box" *ngIf="isAdmin()">
+        <input type="number" [(ngModel)]="searchId" placeholder="Buscar por ID (ej. 1)" class="search-input"
+          (keyup.enter)="searchOrderById()" />
+        <button class="btn-search" (click)="searchOrderById()" title="Buscar orden por número de ID">Buscar</button>
+      </div>
+
+      <button *ngIf="isAdmin()" class="btn-toggle-view" (click)="toggleViewMode()"
+        title="Alternar entre ver por bloques de alumno o lista continua">
+        {{ viewMode === 'GROUPED' ? ' Vista Cronológica' : ' Agrupar por Alumno' }}
+      </button>
+
+      <button class="btn-refresh" (click)="resetFilters()"
+        title="Restablecer filtros y ver todas las órdenes del sistema">
+        Ver Todas
+      </button>
+    </div>
+  </header>
+
+  <!-- INDICADOR DE CARGA -->
+  <div *ngIf="loading" class="loading-container">
+    <div class="spinner"></div>
+    <p>Cargando información de pedidos...</p>
+  </div>
+
+  <!-- VISTA 1: DETALLE DE UNA ORDEN SELECCIONADA -->
+  <div *ngIf="selectedOrder && !loading" class="order-detail-view">
+    <div class="detail-header">
+      <button class="btn-back" (click)="selectedOrder = null">
+        Volver al listado
+      </button>
+      <div class="detail-title-group">
+        <h2>Orden #{{ selectedOrder.id }}</h2>
+        <span class="status-badge" [ngClass]="getStatusClass(selectedOrder.status)">
+          {{ getStatusLabel(selectedOrder.status) }}
+        </span>
+      </div>
+    </div>
+
+    <div class="detail-grid">
+      <!-- RESUMEN GENERAL -->
+      <div class="detail-info-card">
+        <h3>Información del Pedido</h3>
+        <div class="info-row">
+          <span>Número de Orden:</span>
+          <strong>#{{ selectedOrder.id }}</strong>
+        </div>
+        <div class="info-row" *ngIf="isAdmin() || selectedOrder.user">
+          <span>Alumno/Estudiante:</span>
+          <strong class="user-info-text">👤 {{ getUserDisplayName(selectedOrder.user) }}</strong>
+        </div>
+        <div class="info-row">
+          <span>Fecha de Emisión:</span>
+          <strong>{{ formatDate(selectedOrder.fecha) }}</strong>
+        </div>
+        <div class="info-row">
+          <span>Estado Actual:</span>
+          <strong [ngClass]="getStatusClass(selectedOrder.status)" class="text-status">
+            {{ getStatusLabel(selectedOrder.status) }}
+          </strong>
+        </div>
+        <div class="info-row total-row">
+          <span>Total a Pagar:</span>
+          <strong class="total-amount">S/ {{ selectedOrder.total ? selectedOrder.total.toFixed(2) : '0.00' }}</strong>
+        </div>
+
+        <div class="detail-actions" *ngIf="selectedOrder.status === 'CREATED' || selectedOrder.status === 'PENDING'">
+          <button class="btn-pay-action" (click)="payOrder(selectedOrder)">
+            Pagar Pedido
+          </button>
+          <button class="btn-cancel-action" (click)="cancelOrder(selectedOrder)">
+            Cancelar Pedido
+          </button>
+        </div>
+
+        <div class="paid-success-box" *ngIf="selectedOrder.status === 'PAID'">
+          <p><strong>Pago Confirmado</strong></p>
+          <span>Tu transacción ha sido verificada y tu pedido está listo para ser despachado por el campus.</span>
+        </div>
+
+        <div class="cancelled-box" *ngIf="selectedOrder.status === 'CANCELLED'">
+          <p><strong>Pedido Cancelado</strong></p>
+          <span>Este pedido no procesará ningún cobro y ha quedado inactivo.</span>
+        </div>
+      </div>
+
+      <!-- LISTA DE PRODUCTOS EN LA ORDEN -->
+      <div class="detail-items-card">
+        <h3>Artículos Incluidos ({{ selectedOrder.items?.length || 0 }})</h3>
+
+        <div class="order-items-list">
+          <div *ngFor="let item of selectedOrder.items" class="order-item-row">
+            <div class="item-img-container">
+              <img *ngIf="item.product && item.product.imagen" [src]="item.product.imagen" [alt]="item.product.nombre"
+                class="item-thumb" />
+              <div *ngIf="!item.product || !item.product.imagen" class="item-thumb-placeholder">UTP</div>
+            </div>
+
+            <div class="item-meta">
+              <h4>{{ item.product ? item.product.nombre : 'Producto Universitario' }}</h4>
+              <span class="item-unit-price">Precio unitario: S/ {{ item.product ? item.product.precio : 0 }}</span>
+            </div>
+
+            <div class="item-quantity">
+              <span>Cantidad: <strong>{{ item.cantidad }}</strong></span>
+            </div>
+
+            <div class="item-subtotal">
+              <span>Subtotal:</span>
+              <strong>S/ {{ item.subtotal ? item.subtotal.toFixed(2) : '0.00' }}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISTA 2: GRID DE TODAS LAS ÓRDENES -->
+  <div *ngIf="!selectedOrder && !loading" class="orders-list-view">
+    <div *ngIf="ordersList.length === 0" class="empty-orders">
+      <h3>No tienes órdenes registradas</h3>
+      <p>Cuando proceses tu compra desde el carrito, tus pedidos aparecerán en esta sección para su seguimiento.</p>
+      <a routerLink="/products" class="btn-explore">Explorar Catálogo de Productos</a>
+    </div>
+
+    <!-- MODO 1: VISTA AGRUPADA POR ALUMNO (PARA ADMINISTRADOR) -->
+    <div *ngIf="ordersList.length > 0 && viewMode === 'GROUPED' && isAdmin()" class="grouped-orders-container">
+      <div *ngFor="let g of groupedOrdersList" class="user-order-group">
+        <!-- CABECERA DE LA SECCIÓN DE ESTE ALUMNO -->
+        <div class="user-group-header">
+          <div class="group-user-info">
+            <span class="group-icon">👤</span>
+            <div class="group-titles">
+              <h3 class="group-title">{{ g.displayName }}</h3>
+              <span class="group-subtitle">{{ g.orders.length }} pedido(s) registrado(s)</span>
+            </div>
+          </div>
+          <div class="group-stats">
+            <span class="group-total-spent">Total acumulado: <strong>S/ {{ getGroupTotal(g.orders) }}</strong></span>
+          </div>
+        </div>
+
+        <!-- TARJETAS DE LAS ÓRDENES DE ESTE ALUMNO -->
+        <div class="orders-grid">
+          <div *ngFor="let o of g.orders" class="order-card" (click)="selectOrder(o)">
+            <div class="card-header">
+              <span class="order-id">Orden #{{ o.id }}</span>
+              <span class="status-badge" [ngClass]="getStatusClass(o.status)">
+                {{ getStatusLabel(o.status) }}
+              </span>
+            </div>
+
+            <div class="card-body">
+              <div class="meta-row">
+                <span>Fecha:</span>
+                <span>{{ formatDate(o.fecha) }}</span>
+              </div>
+              <div class="meta-row">
+                <span>Artículos:</span>
+                <span>{{ o.items?.length || 0 }} producto(s)</span>
+              </div>
+              <div class="meta-row total-row">
+                <span>Total:</span>
+                <span class="card-total">S/ {{ o.total ? o.total.toFixed(2) : '0.00' }}</span>
+              </div>
+            </div>
+
+            <div class="card-footer" (click)="$event.stopPropagation()">
+              <button class="btn-detail" (click)="selectOrder(o)">Ver Detalles</button>
+              <button *ngIf="o.status === 'CREATED' || o.status === 'PENDING'" class="btn-pay-small"
+                (click)="payOrder(o, $event)">Pagar</button>
+              <button *ngIf="o.status === 'CREATED' || o.status === 'PENDING'" class="btn-cancel-small"
+                (click)="cancelOrder(o, $event)">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODO 2: VISTA CRONOLÓGICA PLANA (PARA ALUMNO O ADMINISTRADOR EN MODO CRONOLÓGICO) -->
+    <div *ngIf="ordersList.length > 0 && (viewMode === 'FLAT' || !isAdmin())" class="orders-grid">
+      <div *ngFor="let o of ordersList" class="order-card" (click)="selectOrder(o)">
+        <div class="card-header">
+          <span class="order-id">Orden #{{ o.id }}</span>
+          <span class="status-badge" [ngClass]="getStatusClass(o.status)">
+            {{ getStatusLabel(o.status) }}
+          </span>
+        </div>
+
+        <div class="card-body">
+          <div class="meta-row" *ngIf="isAdmin() || o.user">
+            <span>Estudiante:</span>
+            <strong class="card-user-badge">👤 {{ getUserDisplayName(o.user) }}</strong>
+          </div>
+          <div class="meta-row">
+            <span>Fecha:</span>
+            <span>{{ formatDate(o.fecha) }}</span>
+          </div>
+          <div class="meta-row">
+            <span>Artículos:</span>
+            <span>{{ o.items?.length || 0 }} producto(s)</span>
+          </div>
+          <div class="meta-row total-row">
+            <span>Total:</span>
+            <span class="card-total">S/ {{ o.total ? o.total.toFixed(2) : '0.00' }}</span>
+          </div>
+        </div>
+
+        <div class="card-footer" (click)="$event.stopPropagation()">
+          <button class="btn-detail" (click)="selectOrder(o)">Ver Detalles</button>
+          <button *ngIf="o.status === 'CREATED' || o.status === 'PENDING'" class="btn-pay-small"
+            (click)="payOrder(o, $event)">Pagar</button>
+          <button *ngIf="o.status === 'CREATED' || o.status === 'PENDING'" class="btn-cancel-small"
+            (click)="cancelOrder(o, $event)">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

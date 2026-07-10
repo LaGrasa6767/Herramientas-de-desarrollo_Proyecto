@@ -1,0 +1,254 @@
+<div class="products-container">
+
+  <!-- Encabezado y Barra de Búsqueda por Nombre -->
+  <header class="products-header">
+    <div class="header-titles">
+      <h1> Catálogo de Productos</h1>
+      <p>Explora nuestra selección de artículos disponibles con control en tiempo real de inventario y stock.</p>
+    </div>
+
+    <!-- Barra de Búsqueda por Nombre -->
+    <div class="search-box">
+      <span class="search-icon"></span>
+      <input type="text" placeholder="Buscar producto por nombre..." [(ngModel)]="searchText" (input)="search()"
+        class="search-input" />
+      <button *ngIf="searchText" class="clear-search-btn" (click)="searchText = ''; search()">✖</button>
+    </div>
+  </header>
+
+  <!-- Notificación flotante de feedback -->
+  <div *ngIf="mensaje" class="toast-notification" [ngClass]="tipoMensaje">
+    <span>{{ tipoMensaje === 'success' ? '✅' : '⚠️' }} {{ mensaje }}</span>
+  </div>
+
+  <!-- PANEL DE ADMINISTRACIÓN (SOLO PARA ADMINS) -->
+  <section class="admin-panel" *ngIf="isAdmin()">
+    <div class="admin-header">
+      <span class="admin-badge"> PANEL EXCLUSIVO ADMINISTRADOR</span>
+      <h2>Gestión y Alta de Inventario</h2>
+    </div>
+
+    <div class="admin-grid">
+      <!-- Tarjeta: Crear / Editar Producto -->
+      <div class="admin-card create-card" [class.editing-mode]="editingId">
+        <h3 *ngIf="!editingId"> Registrar Nuevo Producto</h3>
+        <h3 *ngIf="editingId" class="edit-title">✏️ Editando Producto: {{ nombre }}</h3>
+
+        <p class="admin-subtitle" *ngIf="!editingId">Ingresa los datos o sube una imagen local para registrar el
+          artículo.</p>
+        <p class="admin-subtitle" *ngIf="editingId">Modifica los campos necesarios y presiona Actualizar para guardar.
+        </p>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Nombre del producto *</label>
+            <input type="text" placeholder="Ej: Laptop HP Pavilion 15" [(ngModel)]="nombre">
+          </div>
+
+          <div class="form-group row-inputs">
+            <div>
+              <label>Precio (S/) *</label>
+              <input type="number" placeholder="0.00" [(ngModel)]="precio">
+            </div>
+            <div>
+              <label>Stock disponible *</label>
+              <input type="number" placeholder="Cantidad" [(ngModel)]="stock">
+            </div>
+          </div>
+
+          <!-- Selector dual: Archivo de imagen local O URL externa -->
+          <div class="form-group">
+            <label>Imagen del Producto (Sube desde tu PC o pega URL)</label>
+            <div class="image-upload-wrapper">
+              <label class="custom-file-upload">
+                <input type="file" accept="image/*" (change)="onFileSelected($event)" />
+                <span>📂 Subir desde Descargas / PC</span>
+              </label>
+              <input type="text" placeholder="...o pega una URL de internet aquí" [(ngModel)]="imagen"
+                class="url-input">
+            </div>
+
+            <!-- Previsualización en tiempo real de la foto antes de guardar -->
+            <div class="image-preview-container" *ngIf="imagen">
+              <span class="preview-label">Vista previa:</span>
+              <img [src]="imagen" alt="Vista previa" class="image-preview-thumb">
+              <button class="remove-preview-btn" (click)="imagen = ''" title="Quitar imagen">✖</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Descripción detallada</label>
+            <textarea rows="2" placeholder="Describe las características principales del producto..."
+              [(ngModel)]="descripcion"></textarea>
+          </div>
+
+          <!-- Botones dinámicos según sea Crear o Editar -->
+          <button *ngIf="!editingId" class="btn-create" (click)="create()">
+            <span> Subir Producto a Base de Datos</span>
+          </button>
+
+          <div *ngIf="editingId" class="edit-buttons-row">
+            <button class="btn-update" (click)="update()">
+              <span> Actualizar en Base de Datos</span>
+            </button>
+            <button class="btn-cancel" (click)="cancelEdit()">
+              <span>✖ Cancelar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Aplicar Descuentos sobre Precios -->
+      <div class="admin-card discount-card">
+        <h3> Aplicar Descuento Rápido</h3>
+        <p class="admin-subtitle">Selecciona un producto existente y rebaja su precio en tiempo real.</p>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Selecciona el producto</label>
+            <select [(ngModel)]="selectedDiscountProductId" class="admin-select">
+              <option [ngValue]="0">-- Elige un producto --</option>
+              <option *ngFor="let p of products" [ngValue]="p.id">
+                {{ p.nombre }} (Precio actual: S/ {{ p.precio }})
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Porcentaje de rebaja</label>
+            <select [(ngModel)]="porcentaje" class="admin-select">
+              <option [ngValue]="0.05">5% de descuento</option>
+              <option [ngValue]="0.10">10% de descuento</option>
+              <option [ngValue]="0.15">15% de descuento</option>
+              <option [ngValue]="0.20">20% de descuento</option>
+              <option [ngValue]="0.25">25% de descuento</option>
+              <option [ngValue]="0.30">30% de descuento</option>
+              <option [ngValue]="0.50">50% de descuento (Mitad de precio)</option>
+            </select>
+          </div>
+
+          <div class="discount-preview" *ngIf="selectedDiscountProductId > 0">
+            <span> El precio del producto seleccionado se reducirá un <strong>{{ porcentaje * 100 }}%</strong> de manera
+              inmediata en la base de datos.</span>
+          </div>
+
+          <button class="btn-discount" (click)="applyDiscount()" [disabled]="!selectedDiscountProductId">
+            <span> Aplicar Descuento al Precio</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LISTADO DE PRODUCTOS (GRID MODERNO) -->
+  <section class="products-grid-section">
+    <div *ngIf="filteredProducts.length === 0" class="empty-state">
+      <span class="empty-icon">📦</span>
+      <h3>No se encontraron productos</h3>
+      <p>No hay artículos que coincidan con la búsqueda "<strong>{{ searchText }}</strong>".</p>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let p of filteredProducts" [class.sold-out]="p.stock <= 0"
+        (click)="openDetail(p)">
+        <!-- Badges y Acciones de Administrador -->
+        <div class="card-badges">
+          <div>
+            <span class="badge badge-stock" *ngIf="p.stock > 0"> Stock: {{ p.stock }}</span>
+            <span class="badge badge-soldout" *ngIf="p.stock <= 0"> AGOTADO</span>
+          </div>
+
+          <!-- Botones flotantes de Editar y Eliminar (Solo Admin) -->
+          <div class="admin-actions-group" *ngIf="isAdmin()">
+            <button class="badge-action badge-edit" (click)="edit(p, $event)" title="Editar este producto">✏️</button>
+            <button class="badge-action badge-delete" (click)="delete(p.id, p.nombre, $event)"
+              title="Eliminar Producto">🗑️</button>
+          </div>
+        </div>
+
+        <!-- Imagen del Producto -->
+        <div class="product-image-wrapper">
+          <img [src]="getProductImage(p)" [alt]="p.nombre" class="product-image" loading="lazy">
+        </div>
+
+        <!-- Contenido y Datos -->
+        <div class="product-details">
+          <h3 class="product-title">{{ p.nombre }}</h3>
+          <p class="product-desc">{{ getResumenDescripcion(p) }}</p>
+
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio</span>
+              <span class="price-amount">S/ {{ p.precio }}</span>
+            </div>
+
+            <!-- Botón Agregar al Carrito (Deshabilitado si está agotado) -->
+            <button class="btn-add-cart" [disabled]="p.stock <= 0" (click)="addToCart(p, 1, $event)"
+              [title]="p.stock <= 0 ? 'Producto agotado' : 'Añadir 1 unidad al carrito'">
+              <span *ngIf="p.stock > 0"> Agregar</span>
+              <span *ngIf="p.stock <= 0">Agotado</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL DE DETALLE DEL PRODUCTO -->
+  <div class="modal-overlay" *ngIf="selectedProduct" (click)="closeDetail()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="modal-close" (click)="closeDetail()">✖</button>
+
+      <div class="modal-body">
+        <div class="modal-image">
+          <img [src]="getProductImage(selectedProduct)" [alt]="selectedProduct.nombre">
+        </div>
+
+        <div class="modal-info">
+          <div class="modal-header">
+            <span class="badge badge-stock" *ngIf="selectedProduct.stock > 0">🟢 Disponible: {{ selectedProduct.stock }}
+              en inventario</span>
+            <span class="badge badge-soldout" *ngIf="selectedProduct.stock <= 0">🔴 PRODUCTO SIN STOCK (AGOTADO)</span>
+            <h2>{{ selectedProduct.nombre }}</h2>
+          </div>
+
+          <div class="modal-price">
+            <span>S/ {{ selectedProduct.precio }}</span>
+          </div>
+
+          <div class="modal-description">
+            <h4>Descripción del Producto</h4>
+            <p>{{ getDescripcionCompleta(selectedProduct) }}</p>
+          </div>
+
+          <!-- Selector de cantidad y Agregar al Carrito -->
+          <div class="modal-actions" *ngIf="selectedProduct.stock > 0">
+            <div class="quantity-selector">
+              <label>Cantidad:</label>
+              <input type="number" [(ngModel)]="quantityToAdd" min="1" [max]="selectedProduct.stock"
+                class="quantity-input" />
+            </div>
+
+            <button class="btn-modal-cart" (click)="addToCart(selectedProduct, quantityToAdd)">
+              <span>🛒 Añadir al Carrito ({{ quantityToAdd }})</span>
+            </button>
+          </div>
+
+          <div class="modal-actions-soldout" *ngIf="selectedProduct.stock <= 0">
+            <button class="btn-disabled-soldout" disabled>
+              🚫 No disponible para compra (Stock agotado)
+            </button>
+          </div>
+
+          <!-- Botón de edición directa para Admin desde el Modal -->
+          <div class="modal-admin-actions" *ngIf="isAdmin()">
+            <button class="btn-modal-edit" (click)="edit(selectedProduct, $event)">
+              ✏️ Editar datos y foto de este producto
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

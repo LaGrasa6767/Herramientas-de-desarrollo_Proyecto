@@ -1,0 +1,129 @@
+<div class="users-container">
+
+  <!-- PANTALLA DE ACCESO RESTRINGIDO PARA USUARIOS NORMALES -->
+  <div class="access-denied-panel" *ngIf="!isAdmin()">
+    <div class="denied-icon">🔒</div>
+    <h2>Acceso Restringido</h2>
+    <p>Esta sección es exclusiva para los administradores del sistema Marketplace UTP. No dispones de los permisos necesarios para visualizar o modificar la base de datos de usuarios.</p>
+    <a routerLink="/home" class="btn-return-home">Volver al Inicio</a>
+  </div>
+
+  <!-- PANTALLA DE GESTIÓN EXCLUSIVA PARA ADMINISTRADORES -->
+  <div *ngIf="isAdmin()">
+    <!-- Encabezado y Barra de Búsqueda -->
+    <header class="users-header">
+      <div class="header-titles">
+        <h1>Gestión de Usuarios del Sistema</h1>
+        <p>Administra las cuentas registradas, asigna roles de acceso y mantén el control de la comunidad UTP.</p>
+      </div>
+
+      <!-- Barra de Búsqueda -->
+      <div class="search-box">
+        <input 
+          type="text" 
+          placeholder="Buscar por nombre, correo o rol..." 
+          [(ngModel)]="searchText" 
+          (input)="search()" 
+          class="search-input"
+        />
+        <button *ngIf="searchText" class="clear-search-btn" (click)="searchText = ''; search()">✖</button>
+      </div>
+    </header>
+
+    <!-- Notificación flotante de feedback -->
+    <div *ngIf="mensaje" class="toast-notification" [ngClass]="tipoMensaje">
+      <span>{{ tipoMensaje === 'success' ? '✅' : '⚠️' }} {{ mensaje }}</span>
+    </div>
+
+    <!-- PANEL SUPERIOR: REGISTRAR NUEVO USUARIO -->
+    <section class="admin-create-section">
+      <div class="admin-create-card">
+        <div class="card-header">
+          <span class="admin-badge">PANEL ADMINISTRATIVO</span>
+          <h3>Registrar Nuevo Usuario</h3>
+          <p>Completa el formulario para dar de alta una nueva cuenta en la base de datos de MySQL/PostgreSQL.</p>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre y Apellidos *</label>
+              <input type="text" placeholder="Ej: Carlos Mendoza Pérez" [(ngModel)]="nombre">
+            </div>
+            <div class="form-group">
+              <label>Correo electrónico institucional *</label>
+              <input type="email" placeholder="carlos.mendoza@utp.edu.pe" [(ngModel)]="email">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Dirección de envío o sede *</label>
+              <input type="text" placeholder="Ej: Av. Arequipa 265, Lima" [(ngModel)]="direccion">
+            </div>
+            <div class="form-group">
+              <label>Contraseña temporal *</label>
+              <input type="password" placeholder="********" [(ngModel)]="password">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Rol asignado en el sistema *</label>
+              <select [(ngModel)]="role" class="admin-select">
+                <option value="USER">Usuario Estándar (Comprador / Estudiante)</option>
+                <option value="ADMIN">Administrador (Gestión total del sistema)</option>
+              </select>
+            </div>
+            <div class="form-group btn-align">
+              <button class="btn-create-user" (click)="create()">
+                <span>Registrar Usuario en Base de Datos</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LISTADO DE USUARIOS REGISTRADOS -->
+    <section class="users-list-section">
+      <div class="list-header">
+        <h2>Usuarios Registrados ({{ filteredUsers.length }})</h2>
+      </div>
+
+      <!-- Estado vacío cuando no hay resultados de búsqueda -->
+      <div *ngIf="filteredUsers.length === 0" class="empty-state">
+        <h3>No se encontraron usuarios</h3>
+        <p>No hay cuentas que coincidan con los criterios de búsqueda "<strong>{{ searchText }}</strong>".</p>
+      </div>
+
+      <!-- Grid de tarjetas de usuarios -->
+      <div class="users-grid" *ngIf="filteredUsers.length > 0">
+        <div class="user-card" *ngFor="let u of filteredUsers">
+          <div class="user-card-top">
+            <div class="user-avatar">
+              <span>{{ u.nombre ? u.nombre.charAt(0).toUpperCase() : 'U' }}</span>
+            </div>
+            <div class="user-role-badge" [class.admin-role]="u.role && u.role.toUpperCase().includes('ADMIN')">
+              {{ (u.role && u.role.toUpperCase().includes('ADMIN')) ? 'ADMINISTRADOR' : 'USUARIO' }}
+            </div>
+          </div>
+
+          <div class="user-info">
+            <h3 class="user-name">{{ u.nombre || 'Sin nombre asignado' }}</h3>
+            <p class="user-email">{{ u.email }}</p>
+            <p class="user-address"><strong>Dirección:</strong> {{ u.direccion || 'No especificada' }}</p>
+            <p class="user-id"><strong>ID Sistema:</strong> #{{ u.id }}</p>
+          </div>
+
+          <div class="user-actions">
+            <button class="btn-delete" (click)="delete(u.id, u.nombre)">
+              Eliminar usuario
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</div>

@@ -1,0 +1,151 @@
+<div class="cart-container">
+
+  <!-- Encabezado -->
+  <header class="cart-header">
+    <div class="header-titles">
+      <h1>Canasta de Compras & Checkout</h1>
+      <p>Revisa los artículos seleccionados, verifica el inventario y procesa tu pedido en el sistema.</p>
+    </div>
+  </header>
+
+  <!-- Notificación flotante de feedback -->
+  <div *ngIf="mensaje" class="toast-notification" [ngClass]="tipoMensaje">
+    <span>{{ tipoMensaje === 'success' ? '✅' : '⚠️' }} {{ mensaje }}</span>
+  </div>
+
+  <!-- BARRA SUPERIOR: AGREGAR PRODUCTO RÁPIDO -->
+  <section class="quick-add-section">
+    <div class="quick-add-card">
+      <span class="quick-add-badge">AÑADIR RÁPIDO DESDE CATÁLOGO</span>
+      <div class="quick-add-form">
+        <div class="form-group select-group">
+          <label>Selecciona un producto disponible en stock:</label>
+          <select [(ngModel)]="productId" class="custom-select">
+            <option [ngValue]="0">-- Elige un producto --</option>
+            <option *ngFor="let p of productsList" [ngValue]="p.id">
+              {{ p.nombre }} - Precio: S/ {{ p.precio }} (Disponibles: {{ p.stock }})
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group quantity-group">
+          <label>Cantidad:</label>
+          <input type="number" [(ngModel)]="quantity" min="1" class="custom-input" />
+        </div>
+
+        <button class="btn-quick-add" (click)="add()" [disabled]="!productId || productId <= 0">
+          <span>Añadir a la Canasta</span>
+        </button>
+
+        <a routerLink="/products" class="btn-go-products">Ver Catálogo Completo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTADO VACÍO CUANDO NO HAY PRODUCTOS -->
+  <div *ngIf="cart.length === 0" class="empty-state">
+    <div class="empty-icon">🛒</div>
+    <h2>Tu canasta de compras está vacía</h2>
+    <p>Aún no has añadido ningún producto. Explora nuestro catálogo y descubre la mejor tecnología y artículos
+      universitarios.</p>
+    <a routerLink="/products" class="btn-explore">Explorar Catálogo de Productos</a>
+  </div>
+
+  <!-- LAYOUT PRINCIPAL DE CARRITO (CUADRÍCULA E-COMMERCE) -->
+  <div class="cart-grid" *ngIf="cart.length > 0">
+
+    <!-- COLUMNA IZQUIERDA: LISTA DE ARTÍCULOS EN LA CANASTA -->
+    <div class="cart-items-column">
+      <div class="column-header">
+        <h2>Artículos seleccionados ({{ cart.length }})</h2>
+        <button class="btn-clear-top" (click)="clear()">Vaciar todo el carrito</button>
+      </div>
+
+      <div class="items-list">
+        <div class="cart-item-card" *ngFor="let item of cart">
+          <!-- Miniatura de imagen con encuadre cover -->
+          <div class="item-image-wrapper">
+            <img [src]="getItemImage(item)" [alt]="item.product ? item.product.nombre : 'Producto'" class="item-img" />
+          </div>
+
+          <!-- Detalles del producto y controles directos de cantidad -->
+          <div class="item-details">
+            <h3 class="item-name">{{ item.product ? item.product.nombre : 'Producto sin nombre' }}</h3>
+            <p class="item-price-unit">Precio unitario: <strong>S/ {{ item.product ? item.product.precio : 0 }}</strong>
+            </p>
+
+            <div class="item-qty-controls">
+              <span class="qty-label">Cantidad:</span>
+              <div class="qty-buttons-group">
+                <button class="btn-qty-minus" (click)="updateQuantity(item, item.cantidad - 1)"
+                  title="Restar 1 unidad">-</button>
+                <span class="qty-number">{{ item.cantidad }}</span>
+                <button class="btn-qty-plus" (click)="updateQuantity(item, item.cantidad + 1)"
+                  title="Sumar 1 unidad">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subtotal y Botón Eliminar -->
+          <div class="item-actions-col">
+            <div class="item-subtotal-box">
+              <span class="subtotal-label">Subtotal</span>
+              <span class="subtotal-amount">S/ {{ item.subtotal }}</span>
+            </div>
+
+            <button class="btn-remove-item" (click)="removeItem(item)" title="Quitar este artículo de la canasta">
+              Quitar ítem
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA: RESUMEN DE COMPRA & CHECKOUT -->
+    <div class="cart-summary-column">
+      <div class="summary-card">
+        <div class="summary-header">
+          <h3>Resumen de Pedido</h3>
+          <span class="summary-badge">OFICIAL UTP</span>
+        </div>
+
+        <div class="summary-body">
+          <div class="summary-row">
+            <span>Subtotal ({{ cart.length }} ítems)</span>
+            <span>S/ {{ total }}</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Costo de envío / Despacho</span>
+            <span class="free-shipping">S/ 0.00 (Gratis UTP)</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Garantía Institucional</span>
+            <span>Incluida (100%)</span>
+          </div>
+
+          <hr class="summary-divider" />
+
+          <div class="summary-row total-row">
+            <span>Total a Pagar</span>
+            <span class="total-amount">S/ {{ total }}</span>
+          </div>
+
+          <p class="checkout-hint">Al procesar tu pedido, se generará una Orden oficial en la base de datos lista para
+            realizar el pago en línea.</p>
+
+          <button class="btn-checkout" (click)="checkout()">
+            <span> Procesar Compra y Generar Orden</span>
+          </button>
+
+          <button class="btn-summary-clear" (click)="clear()">
+            <span>Vaciar todo el carrito</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,186 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================
+   HERO BANNER
+   ========================================= */
+.hero-banner {
+  background: linear-gradient(135deg, #000B47 0%, #14213d 100%);
+  color: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 11, 71, 0.15);
+  margin-bottom: 45px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(200, 16, 46, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.role-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: #6ee7b7;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #d1d8e6;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   QUICK ACCESS SECTION (CARDS)
+   ========================================= */
+.section-title {
+  font-size: 26px;
+  color: #14213d;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.access-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.access-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0, 11, 71, 0.1);
+  border-color: #C8102E;
+}
+
+.card-icon {
+  font-size: 38px;
+  margin-bottom: 18px;
+}
+
+.access-card h3 {
+  font-size: 20px;
+  color: #000B47;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.access-card p {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.card-link {
+  color: #C8102E;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.access-card:hover .card-link {
+  color: #a80c27;
+  text-decoration: underline;
+}
+
+/* =========================================
+   FEATURES SECTION
+   ========================================= */
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  background: #f8fafc;
+  border: 1px solid #e9eff5;
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.feature-icon {
+  font-size: 28px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.feature-item h4 {
+  color: #14213d;
+  font-size: 17px;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.feature-item p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 35px 25px;
+  }
+  
+  .hero-content h1 {
+    font-size: 30px;
+  }
+  
+  .hero-content p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,39 @@
+<div class="login-container">
+    <div class="login-card">
+        <!-- Panel izquierdo -->
+        <div class="left-panel">
+            <img src="logo-utp.png" alt="UTP" class="logo">
+            <h1>Marketplace</h1>
+            <h3>Universidad Tecnológica del Perú</h3>
+            <p>
+                Compra y vende productos de forma rápida,
+                sencilla y segura.
+            </p>
+        </div>
+        <!-- Panel derecho -->
+        <div class="right-panel">
+            <div class="login-box">
+                <h2>Bienvenido</h2>
+                <p class="subtitle">
+                    Inicia sesión para continuar
+                </p>
+                <form (ngSubmit)="login()">
+                    <div class="input-group">
+                        <label>Correo electrónico</label>
+                        <input type="email" [(ngModel)]="email" name="email" placeholder="correo@utp.edu.pe" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Contraseña</label>
+                        <input type="password" [(ngModel)]="password" name="password" placeholder="********" required>
+                    </div>
+                    <button type="submit">
+                        Iniciar sesión
+                    </button>
+                </form>
+                <p class="mensaje">
+                    {{mensaje}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

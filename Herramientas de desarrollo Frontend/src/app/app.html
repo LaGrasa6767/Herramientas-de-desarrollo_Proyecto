@@ -1,0 +1,43 @@
+<header class="main-navbar" *ngIf="router.url !== '/login' && authService.isLoggedIn()">
+  <div class="navbar-container">
+    <!-- Logo / Marca -->
+    <a routerLink="/home" class="navbar-brand">
+      <img src="logo-utp.png" alt="UTP" class="navbar-logo">
+      <div class="brand-text">
+        <span class="brand-title">Marketplace</span>
+        <span class="brand-subtitle">Portal UTP</span>
+      </div>
+    </a>
+
+    <!-- Enlaces Principales -->
+    <nav class="navbar-nav">
+      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <span class="nav-icon"></span> Inicio
+      </a>
+      <a routerLink="/products" routerLinkActive="active">
+        <span class="nav-icon"></span> Productos
+      </a>
+      <a *ngIf="isAdmin()" routerLink="/users" routerLinkActive="active">
+        <span class="nav-icon"></span> Usuarios
+      </a>
+      <a *ngIf="!isAdmin()" routerLink="/cart" routerLinkActive="active">
+        <span class="nav-icon"></span> Carrito
+      </a>
+      <a routerLink="/orders" routerLinkActive="active">
+        <span class="nav-icon"></span> Órdenes
+      </a>
+    </nav>
+
+    <!-- Botón Cerrar Sesión -->
+    <div class="navbar-actions">
+      <button class="logout-btn" (click)="authService.logout()">
+        <span>Cerrar sesión</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Contenedor Principal de la Ruta Activa -->
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>

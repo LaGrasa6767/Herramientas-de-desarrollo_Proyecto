@@ -1,0 +1,416 @@
+/* =========================================
+   CONTENEDOR GENERAL
+   ========================================= */
+.users-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1A1A1A;
+}
+
+/* =========================================
+   PANTALLA DE ACCESO RESTRINGIDO
+   ========================================= */
+.access-denied-panel {
+  background: white;
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  max-width: 650px;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-top: 6px solid #C8102E;
+}
+
+.denied-icon {
+  font-size: 54px;
+  margin-bottom: 20px;
+}
+
+.access-denied-panel h2 {
+  font-size: 28px;
+  color: #000B47;
+  margin: 0 0 14px 0;
+  font-weight: 800;
+}
+
+.access-denied-panel p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+}
+
+.btn-return-home {
+  display: inline-block;
+  background: #000B47;
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+.btn-return-home:hover {
+  background: #C8102E;
+  box-shadow: 0 6px 18px rgba(200, 16, 46, 0.35);
+}
+
+/* =========================================
+   HEADER Y BUSCADOR
+   ========================================= */
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: white;
+  padding: 28px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  border-left: 6px solid #C8102E;
+}
+
+.header-titles h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #000B47;
+}
+
+.header-titles p {
+  margin: 0;
+  color: #666;
+  font-size: 15px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f4f6f9;
+  border: 2px solid #e1e6ef;
+  border-radius: 30px;
+  padding: 8px 18px;
+  width: 100%;
+  max-width: 380px;
+  transition: all 0.2s ease;
+}
+
+.search-box:focus-within {
+  border-color: #000B47;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(0, 11, 71, 0.08);
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  color: #333;
+}
+
+.clear-search-btn {
+  background: transparent;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 4px;
+}
+
+.clear-search-btn:hover {
+  color: #C8102E;
+}
+
+/* =========================================
+   NOTIFICACIONES FLOTANTES (TOASTS)
+   ========================================= */
+.toast-notification {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  animation: slideUp 0.3s ease;
+}
+
+.toast-notification.success {
+  background: #000B47;
+  border-left: 5px solid #2ecc71;
+}
+
+.toast-notification.error {
+  background: #C8102E;
+  border-left: 5px solid #ffbc00;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* =========================================
+   PANEL SUPERIOR: CREAR USUARIO (ADMIN)
+   ========================================= */
+.admin-create-section {
+  margin-bottom: 40px;
+}
+
+.admin-create-card {
+  background: #000B47;
+  border-radius: 20px;
+  padding: 30px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 11, 71, 0.2);
+}
+
+.card-header {
+  margin-bottom: 24px;
+}
+
+.admin-badge {
+  background: #C8102E;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.card-header h3 {
+  margin: 0 0 6px 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.card-header p {
+  margin: 0;
+  font-size: 13px;
+  color: #b0bcde;
+}
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #d8e2ff;
+}
+
+.form-group input,
+.admin-select {
+  padding: 13px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.admin-select:focus {
+  border-color: #C8102E;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.admin-select option {
+  background: #000B47;
+  color: white;
+}
+
+.btn-align {
+  justify-content: flex-end;
+}
+
+.btn-create-user {
+  background: #2ecc71;
+  color: #002c11;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 46px;
+  margin-top: auto;
+}
+
+.btn-create-user:hover {
+  background: #27ae60;
+  box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   LISTADO DE USUARIOS (GRID)
+   ========================================= */
+.list-header {
+  margin-bottom: 20px;
+}
+
+.list-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #000B47;
+  margin: 0;
+}
+
+.empty-state {
+  text-align: center;
+  background: white;
+  padding: 60px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.user-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f2f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0, 11, 71, 0.1);
+  border-color: #e1e6ef;
+}
+
+.user-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.user-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #000B47;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(0, 11, 71, 0.2);
+}
+
+.user-role-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  background: #f0f2f5;
+  color: #444;
+  letter-spacing: 0.5px;
+}
+
+.user-role-badge.admin-role {
+  background: #C8102E;
+  color: white;
+  box-shadow: 0 2px 8px rgba(200, 16, 46, 0.4);
+}
+
+.user-info {
+  margin-bottom: 20px;
+}
+
+.user-name {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000B47;
+}
+
+.user-email {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  word-break: break-all;
+}
+
+.user-address,
+.user-id {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.user-actions {
+  border-top: 1px solid #f0f2f5;
+  padding-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-delete {
+  background: rgba(200, 16, 46, 0.08);
+  color: #C8102E;
+  border: 1px solid rgba(200, 16, 46, 0.2);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+  background: #C8102E;
+  color: white;
+  border-color: #C8102E;
+  box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
+}
